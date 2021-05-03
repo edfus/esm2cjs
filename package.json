@@ -1,0 +1,39 @@
+{
+  "name": "@edfus/esm2cjs",
+  "version": "0.1.7",
+  "description": "Lightweight utility for converting es module to common js, powered by RegEx",
+  "scripts": {
+    "test": "mocha"
+  },
+  "type": "module",
+  "author": "edfus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edfus/esm2cjs.git"
+  },
+  "main": "build/index.js",
+  "module": "build/index.mjs",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "node": {
+        "require": "./build/index.js",
+        "import": "./build/index.mjs"
+      },
+      "default": "./build/index.mjs"
+    },
+    "./build/": "./build/"
+  },
+  "license": "ISC",
+  "keywords": [
+    "commonjs",
+    "es-module",
+    "transpile"
+  ],
+  "devDependencies": {
+    "@types/mocha": "^8.2.1"
+  },
+  "dependencies": {
+    "update-file-content": "^1.8.3"
+  }
+}
